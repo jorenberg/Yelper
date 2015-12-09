@@ -1,0 +1,7 @@
+================
+    Authors
+================
+Yelper®, is written and maintained by:
+1. Prabhat Kumar, prabhat.genome@gmail.com
+2. Aiswarya Thomas, aiswaryathomas15@gmail.com
+3. Sequømics Corporation, admin@sequomics.com
