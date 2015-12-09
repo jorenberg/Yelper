@@ -32,3 +32,4 @@ __license__     = 'Apache License'
 import csv
 import json
 import nltk
+import numpy as np
