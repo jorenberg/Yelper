@@ -48,3 +48,9 @@ class doCluster:
     # @staticmethod declarations.
     # A way to write a method inside a class without reference to the object it is being called on.
     @staticmethod
+    # A: k-means clustering.
+    def k_means_scikit(matrix):
+        k_means = skcluster.KMeans(n_clusters=50, init='k-means++', n_init=1, verbose=1)
+        k_means.fit(matrix)
+        # it will return output of k_means_scikit.
+        return k_means.labels_
