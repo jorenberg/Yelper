@@ -41,3 +41,6 @@ import time
 # Python’s class mechanism [doCluster]: A: /yelper/datamining
 # ========================================================================
 class doCluster:
+    # Defining Function and __init__ method as a constructor [private].
+    def __init__(self):
+        pass
