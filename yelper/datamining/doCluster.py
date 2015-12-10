@@ -62,3 +62,11 @@ class doCluster:
         doCluster = nltk.KMeansClusterer(50, nltk.euclidean_distance, avoid_empty_clusters=True, conv_test=10)
         labels = numpy.array(doCluster.cluster(matrix, True, trace=True))
         return labels
+    
+    # A: k-means clustering [scipy].
+    # The vq module only supports vector quantization and the k-means algorithms.
+    @staticmethod
+    def k_means_scipy(matrix):
+        centroids, distortion = scicluster.vq.kmeans(matrix, 50, thresh=0.1)
+        print('Yelper® - Centroids:', centroids)
+        print('Yelper® - Distortion:', distortion)
