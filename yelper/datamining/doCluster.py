@@ -32,3 +32,4 @@ __license__     = 'Apache License'
 import nltk
 import numpy
 import sklearn.cluster as skcluster
+import sklearn.metrics as skmetrics
