@@ -37,3 +37,7 @@ import scipy.cluster as scicluster
 import scipy.spatial.distance as distance
 import matplotlib.pyplot as plt
 import time
+# ========================================================================
+# Python’s class mechanism [doCluster]: A: /yelper/datamining
+# ========================================================================
+class doCluster:
