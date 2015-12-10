@@ -54,3 +54,11 @@ class doCluster:
         k_means.fit(matrix)
         # it will return output of k_means_scikit.
         return k_means.labels_
+    
+    # A: k-means clustering [nltk].
+    # With cosine distance the algorithm doesn't converge.
+    @staticmethod
+    def k_means_nltk(matrix):
+        doCluster = nltk.KMeansClusterer(50, nltk.euclidean_distance, avoid_empty_clusters=True, conv_test=10)
+        labels = numpy.array(doCluster.cluster(matrix, True, trace=True))
+        return labels
