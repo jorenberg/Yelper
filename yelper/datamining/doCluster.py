@@ -70,3 +70,14 @@ class doCluster:
         centroids, distortion = scicluster.vq.kmeans(matrix, 50, thresh=0.1)
         print('Yelper® - Centroids:', centroids)
         print('Yelper® - Distortion:', distortion)
+    
+    # A: GAAC [nltk].
+    # Group-average agglomerative clustering or GAAC.
+    @staticmethod
+    def gaac(matrix):
+        doCluster = nltk.GAAClusterer()
+        labels = numpy.array(doCluster.cluster(matrix, False, trace=True))
+        dendrogram = doCluster.dendrogram()
+        # to show dendrogram
+        dendrogram.show()
+        return labels
