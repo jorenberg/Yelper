@@ -106,3 +106,11 @@ class doCluster:
         n_clusters_ = len(set(labels)) - (1 if -1 in labels else 0)
         print('Yelper® - Estimated number of clusters:', n_clusters_)
         return labels
+    
+    # Ward's method [sklearn].
+    # Ward's method is a criterion applied in hierarchical cluster analysis.
+    @staticmethod
+    def ward(matrix):
+        ward = skcluster.Ward(n_clusters=50, compute_full_tree=False)
+        ward.fit(matrix)
+        return ward.labels_
