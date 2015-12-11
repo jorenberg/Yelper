@@ -94,3 +94,15 @@ class doCluster:
         plt.show()
         leaves = dendrogram['leaves']
         print(leaves)
+    
+    # A: Mean shift [sklearn].
+    # Mean shift clustering using a flat kernel.
+    @staticmethod
+    def mean_shift(matrix):
+        mean_shift = skcluster.MeanShift()
+        mean_shift.fit(matrix)
+        labels = mean_shift.labels_
+        # Number of clusters in labels, ignoring noise if present.
+        n_clusters_ = len(set(labels)) - (1 if -1 in labels else 0)
+        print('Yelper® - Estimated number of clusters:', n_clusters_)
+        return labels
