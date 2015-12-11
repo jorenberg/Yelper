@@ -81,3 +81,16 @@ class doCluster:
         # to show dendrogram
         dendrogram.show()
         return labels
+        
+    # A: hierarchical/agglomerative [scipy].
+    # Performs hierarchical/agglomerative clustering on the condensed distance matrix y.
+    @staticmethod
+    def linkage(matrix):
+        linkage_matrix = scicluster.hierarchy.linkage(matrix)
+        print('Yelper® - Linkage matrix:', linkage_matrix)
+        dendrogram = scicluster.hierarchy.dendrogram(linkage_matrix)
+        ax = plt.gca()
+        xlbls = ax.get_xmajorticklabels()
+        plt.show()
+        leaves = dendrogram['leaves']
+        print(leaves)
