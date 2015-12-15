@@ -126,3 +126,13 @@ class doCluster:
     	n_clusters_ = len(set(labels)) - (1 if -1 in labels else 0)
     	print('Yelper® - Estimated number of clusters:', n_clusters_)
     	return labels
+
+    # A: Silhouette Score
+    # Silhouette refers to a method of interpretation and validation of consistency within clusters of data.
+    # The technique provides a succinct graphical representation of how well each object lies within its cluster.
+    @staticmethod
+    def evaluate_performance(data, labels, metric='euclidean'):
+    	score = skmetrics.silhouette_score(data, labels, metric=metric)
+    	print('Yelper® - Labels:', labels)
+    	print('Yelper® - Score:', score)
+    	return score
