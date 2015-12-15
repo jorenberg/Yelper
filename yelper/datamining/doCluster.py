@@ -107,10 +107,22 @@ class doCluster:
         print('Yelper® - Estimated number of clusters:', n_clusters_)
         return labels
     
-    # Ward's method [sklearn].
+    # A: Ward's method [sklearn].
     # Ward's method is a criterion applied in hierarchical cluster analysis.
     @staticmethod
     def ward(matrix):
         ward = skcluster.Ward(n_clusters=50, compute_full_tree=False)
         ward.fit(matrix)
         return ward.labels_
+
+    # A: DBSCAN
+    # Density-based spatial clustering of applications with noise (DBSCAN).
+    @staticmethod
+    def dbscan(matrix):
+    	dbscan = skcluster.DBSCAN(eps=0.3, min_samples=50, metric='euclidean')
+    	dbscan.fit(matrix)
+    	labels = dbscan.labels_
+    	# Number of clusters in labels, ignoring noise if present.
+    	n_clusters_ = len(set(labels)) - (1 if -1 in labels else 0)
+    	print('Yelper® - Estimated number of clusters:', n_clusters_)
+    	return labels
