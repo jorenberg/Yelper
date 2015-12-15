@@ -140,3 +140,5 @@ class doCluster:
     # A: To show "Cluster Data".
     @staticmethod
     def cluster_data(matrix, algorithm):
+        if algorithm == 'k-means-scikit':
+            return doCluster.k_means_scikit(matrix)
