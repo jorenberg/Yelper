@@ -136,3 +136,7 @@ class doCluster:
     	print('Yelper® - Labels:', labels)
     	print('Yelper® - Score:', score)
     	return score
+    
+    # A: To show "Cluster Data".
+    @staticmethod
+    def cluster_data(matrix, algorithm):
