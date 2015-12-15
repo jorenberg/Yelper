@@ -33,3 +33,6 @@ import csv
 import json
 import nltk
 import numpy as np
+# ========================================================================
+# Python’s class mechanism [ETL]: B: /yelper/etl/
+# ========================================================================
