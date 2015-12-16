@@ -142,3 +142,5 @@ class doCluster:
     def cluster_data(matrix, algorithm):
         if algorithm == 'k-means-scikit':
             return doCluster.k_means_scikit(matrix)
+        elif algorithm == 'k-means-nltk':
+            return doCluster.k_means_nltk(matrix)
