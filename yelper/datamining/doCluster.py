@@ -144,3 +144,5 @@ class doCluster:
             return doCluster.k_means_scikit(matrix)
         elif algorithm == 'k-means-nltk':
             return doCluster.k_means_nltk(matrix)
+        elif algorithm == 'k-means-scipy':
+            return doCluster.k_means_scipy(matrix)
