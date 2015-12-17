@@ -148,3 +148,5 @@ class doCluster:
             return doCluster.k_means_scipy(matrix)
         elif algorithm == 'mean-shift':
             return doCluster.mean_shift(matrix)
+        elif algorithm == 'ward':
+            return doCluster.ward(matrix)
