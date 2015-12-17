@@ -150,3 +150,5 @@ class doCluster:
             return doCluster.mean_shift(matrix)
         elif algorithm == 'ward':
             return doCluster.ward(matrix)
+        elif algorithm == 'dbscan':
+            return doCluster.dbscan(matrix)
