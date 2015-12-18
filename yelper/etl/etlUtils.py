@@ -43,3 +43,8 @@ class ETLUtils:
     # Defining Function and __init__ method as a constructor [private].
     def __init__(self):
         pass
+    
+    
+    # @staticmethod declarations.
+    # A way to write a method inside a class without reference to the object it is being called on.
+    @staticmethod
