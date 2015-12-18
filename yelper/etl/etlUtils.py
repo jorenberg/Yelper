@@ -37,3 +37,4 @@ import numpy as np
 # Python’s class mechanism [ETL]: B: /yelper/etl/
 # ========================================================================
 import random
+from pandas import DataFrame
