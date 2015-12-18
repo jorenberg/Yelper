@@ -152,3 +152,20 @@ class doCluster:
             return doCluster.ward(matrix)
         elif algorithm == 'dbscan':
             return doCluster.dbscan(matrix)
+
+    # A: To show "Clustering and Evaluation of Data".
+    @staticmethod
+    def cluster_and_evaluate_data(matrix, algorithm, metric='euclidean'):
+        print('Yelper® - Clustering started using ' + algorithm)
+        clustering_start = time.time()
+        labels = doCluster.cluster_data(matrix, algorithm)
+        clustering_total = time.time() - clustering_start
+        print('Yelper® - Clustering time:', clustering_total)
+
+        evaluation_start = time.time()
+        score = doCluster.evaluate_performance(matrix, labels, metric)
+        evaluation_total = time.time() - evaluation_start
+        print('Yelper® - Evaluation time:', evaluation_total)
+        total = time.time() - clustering_start
+        print('Yelper® - Total time:', total)
+# ============================================================================
