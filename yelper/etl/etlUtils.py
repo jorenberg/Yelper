@@ -38,3 +38,8 @@ import numpy as np
 # ========================================================================
 import random
 from pandas import DataFrame
+
+class ETLUtils:
+    # Defining Function and __init__ method as a constructor [private].
+    def __init__(self):
+        pass
