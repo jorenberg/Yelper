@@ -48,3 +48,12 @@ class ETLUtils:
     # @staticmethod declarations.
     # A way to write a method inside a class without reference to the object it is being called on.
     @staticmethod
+    def load_json_file(file_path):
+        """
+        Builds a list of dictionaries from a JSON file
+            :type file_path: string
+            :param file_path: the path for the file that contains the businesses data.
+            :return: a list of dictionaries with the data from the files
+        """
+        records = [json.loads(line) for line in open(file_path)]
+        return records
