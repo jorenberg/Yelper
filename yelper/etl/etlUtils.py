@@ -9,7 +9,7 @@ __authors__ 	= [
 __company__ 	= 'Sequømics Corporation'
 __homepage__ 	= 'http://sequomics.com/'
 __account__ 	= 'SequomicsCorporation'
-__githubURL__  = 'https://github.com/SequomicsCorporation'
+__githubURL__   = 'https://github.com/SequomicsCorporation'
 __license__     = 'Apache License'
 
 # ------------------------------------------------------------------------
@@ -64,3 +64,16 @@ class ETLUtils:
             for record in records:
                 json.dump(record, outfile)
                 outfile.write('\n')
+    
+    @staticmethod
+    def drop_fields(fields, dictionary_list):
+        """
+        Removes the specified fields from every dictionary in the dictionary list
+            :rtype : void
+            :param fields: a list of strings, which contains the fields that are
+             going to be removed from every dictionary in the dictionary list
+            :param dictionary_list: a list of dictionaries
+        """
+        for dictionary in dictionary_list:
+            for field in fields:
+                del (dictionary[field])
