@@ -57,3 +57,10 @@ class ETLUtils:
         """
         records = [json.loads(line) for line in open(file_path)]
         return records
+    
+    @staticmethod
+    def save_json_file(file_path, records):
+        with open(file_path, 'w') as outfile:
+            for record in records:
+                json.dump(record, outfile)
+                outfile.write('\n')
