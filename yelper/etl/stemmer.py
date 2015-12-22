@@ -30,3 +30,4 @@ __license__     = 'Apache License'
 # limitations under the License.
 # ========================================================================
 import nltk.stem
+from sklearn.feature_extraction.text import CountVectorizer
