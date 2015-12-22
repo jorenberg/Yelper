@@ -31,3 +31,4 @@ __license__     = 'Apache License'
 # ========================================================================
 import nltk.stem
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
