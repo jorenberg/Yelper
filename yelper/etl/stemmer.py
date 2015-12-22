@@ -40,3 +40,9 @@ class StemmedCountVectorizer(CountVectorizer):
     def build_analyzer(self):
         analyzer = super(StemmedCountVectorizer, self).build_analyzer()
         return lambda doc: (english_stemmer.stem(w) for w in analyzer(doc))
+
+# S1: for Tfidf Vectorizer.
+class StemmedTfidfVectorizer(TfidfVectorizer):
+	def build_analyzer(self):
+		analyzer = super(StemmedTfidfVectorizer, self).build_analyzer()
+		return lambda doc: (english_stemmer.stem(w) for w in analyzer(doc))
