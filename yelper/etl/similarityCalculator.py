@@ -31,3 +31,4 @@ __license__     = 'Apache License'
 # ========================================================================
 import math
 import numpy
+from scipy import spatial
