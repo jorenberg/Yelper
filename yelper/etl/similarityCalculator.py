@@ -32,3 +32,6 @@ __license__     = 'Apache License'
 import math
 import numpy
 from scipy import spatial
+# Chebyshev's inequality.
+def chebyshev(vector1, vector2):
+    return 1. / (1 + spatial.distance.chebyshev(vector1, vector2))
