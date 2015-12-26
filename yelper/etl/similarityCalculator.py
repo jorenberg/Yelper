@@ -36,6 +36,10 @@ from scipy import spatial
 def chebyshev(vector1, vector2):
     return 1. / (1 + spatial.distance.chebyshev(vector1, vector2))
 
-# cosine distance
+# cosine distance.
 def cosine(vector1, vector2):
     return 1 - spatial.distance.cosine(vector1, vector2)
+
+# euclidean distance.
+def euclidean(vector1, vector2):
+    return 1. / (1 + spatial.distance.euclidean(vector1, vector2))
