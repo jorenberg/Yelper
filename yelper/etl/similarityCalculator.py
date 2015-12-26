@@ -35,3 +35,7 @@ from scipy import spatial
 # Chebyshev's inequality.
 def chebyshev(vector1, vector2):
     return 1. / (1 + spatial.distance.chebyshev(vector1, vector2))
+
+# cosine distance
+def cosine(vector1, vector2):
+    return 1 - spatial.distance.cosine(vector1, vector2)
