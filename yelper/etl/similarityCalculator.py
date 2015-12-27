@@ -43,3 +43,7 @@ def cosine(vector1, vector2):
 # euclidean distance.
 def euclidean(vector1, vector2):
     return 1. / (1 + spatial.distance.euclidean(vector1, vector2))
+
+# manhattan distance.
+def manhattan(vector1, vector2):
+    return 1. / (1 + spatial.distance.cityblock(vector1, vector2))
